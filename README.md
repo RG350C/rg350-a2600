@@ -1,39 +1,43 @@
-Welcome to DINGUX-2600
+Welcome to RG350-2600
+
+A multi-platform Atari 2600 VCS emulator
 
 The Stella team :
 
-   Bradford Mott       Project management and emulation core developer (original author of Stella)
+   Ludovic Jacomme alias Zx-81 (see http://zx81.zx81.free.fr)
 
-   Stephen Anthony     Author of the SDL port of Stella and emulation core   
-   Joe D'Andrea        Maintainer of the Solaris build of Stella
-   Doodle              Current maintainer of the OS/2 port of Stella
-   Mark Grebe          Author/maintainer of the Mac OSX port of Stella
-   Erik "Voch" Kovach  Maintainer of the 'stella.pro' game properties file
-   Kostas Nakos        Author/maintainer of the WinCE port of Stella
-   Darrell Spice Jr.   Original author of the OS/2 port of Stella
-   Eckhard Stolberg    Emulation core development
-   Aenea               First PSP port version of Stella
-   Brian Watson        Emulation core development and debugger support
-   Alex Zaballa        Author/maintainer of the DINGUX port of Stella
-   Ludovic Jacomme     Another PSP & DINGUX port of Stella
+    Bradford Mott       Project management and emulation core developer (original author of Stella)
 
-   see http://stella.sourceforge.net/ for further informations
+    Stephen Anthony     Author of the SDL port of Stella and emulation core   
+    Joe D'Andrea        Maintainer of the Solaris build of Stella
+    Doodle              Current maintainer of the OS/2 port of Stella
+    Mark Grebe          Author/maintainer of the Mac OSX port of Stella
+    Erik "Voch" Kovach  Maintainer of the 'stella.pro' game properties file
+    Kostas Nakos        Author/maintainer of the WinCE port of Stella
+    Darrell Spice Jr.   Original author of the OS/2 port of Stella
+    Eckhard Stolberg    Emulation core development
+    Aenea               First PSP port version of Stella
+    Brian Watson        Emulation core development and debugger support
+    Alex Zaballa        Author/maintainer of the DINGUX port of Stella
+    Ludovic Jacomme     Another PSP & DINGUX port of Stella
+    Jorge Hontoria      RG350 port of DINGUX-2600
+
+    PSP2600             PSP version
+    GP2X-2600           GP2X version
+    WIZ-2600            GP2X Wiz version
+    DINGUX-2600         Dingoo/Dingux version
+    RG350-2600          RG350 version
+
+   See http://stella.sourceforge.net/ for further informations
    
-Author of another PSP, WIZ, GP2X-F100, Dingoo/Dingux port versions
-
-  Ludovic.Jacomme also known as Zx-81 (see http://zx81.zx81.free.fr)
-
 
 # INTRODUCTION
 
-  Stella is the best emulator of Atari 2600 game console, 
-  running on many different systems, such as Linux, Solaris, 
-  Windows, MacOS/X WinCE, OS/2, DINGUX.
+  Stella is the best emulator of Atari 2600 game console, running on many different systems, such as Linux, Solaris, Windows, MacOS/X WinCE, OS/2, DINGUX and RG350.
 
-  Dingux2600 is a port on Dingux of my previous GP2X-Wiz port version.
+  RG350-2600 is a port on RG350 of DINGUX-2600 port version.
 
-  This package is under GPL Copyright, read COPYING file for
-  more information about it.
+  This package is under GPL Copyright, read COPYING file for  more information about it.
 
 
 # INSTALLATION
@@ -50,7 +54,7 @@ Author of another PSP, WIZ, GP2X-F100, Dingoo/Dingux port versions
 
 # CONTROL
 
-  DINGUX        Atari 2600
+  RG350        Atari 2600
   
     Y          R Diff A
     X          Reset    
@@ -66,20 +70,20 @@ Author of another PSP, WIZ, GP2X-F100, Dingoo/Dingux port versions
 
   LTrigger mapping :
 
-    DINGUX        Atari 2600
+    RG350      Atari 2600
     
-        Y          Hotkey FPS
-        X          Hotkey Load state
-        B          Hotkey Save state
-        A          Hotkey render
-        Up         Up
-        Down       Down
-        Left       Left
-        Right      Right
+    Y          Hotkey FPS
+    X          Hotkey Load state
+    B          Hotkey Save state
+    A          Hotkey render
+    Up         Up
+    Down       Down
+    Left       Left
+    Right      Right
 
   RTrigger mapping :
 
-    DINGUX        Atari 2600 
+    RG350      Atari 2600 
     
     Y          R Diff B
     X          Reset 
@@ -119,7 +123,7 @@ You can write your own comments for games using the "Comment" menu.  The first l
 
 # LOADING KEY MAPPING FILES
 
-  For given games, the default keyboard mapping between DINGUX Keys and Atari 2600 keys, is not suitable, and the game can't be played on DINGUX-2600.
+  For given games, the default keyboard mapping between RG350 Keys and Atari 2600 keys, is not suitable, and the game can't be played on RG350-2600.
 
   To overcome the issue, you can write your own mapping file. Using notepad for example you can edit a file with the .kbd extension and put it in the kbd directory.
 
@@ -200,29 +204,29 @@ You can write your own comments for games using the "Comment" menu.  The first l
         set flicker mode (none, simple, phosphor or average)
         
     Clock frequency : 
-        DINGUX clock frequency, by default the value is set to 200Mhz, and should be enough for most of all games.
+        RG350 clock frequency, by default the value is set to 200Mhz, and should be enough for most of all games.
 
 # JOYSTICK SETTINGS
 
   You can modify several joystick settings value in the settings menu of this emulator.  The following parameters are available :
 
-  Swap Analog/Cursor : 
-    swap key mapping between DINGUX analog pad and DINGUX digital pad
-  
-  Active Joystick : 
-    Joystick player, it could be 1 or 2
-  
-  Paddle enable :
-    enable or disable paddle
-  
-  Paddle speed :
-    specify paddle speed factor (from 1 to 3)
-  
-  Auto fire period : 
-    auto fire period
-  
-  Auto fire mode : 
-    auto fire mode active or not
+    Swap Analog/Cursor : 
+        swap key mapping between RG350 analog pad and RG350 digital pad
+    
+    Active Joystick : 
+        Joystick player, it could be 1 or 2
+    
+    Paddle enable :
+        enable or disable paddle
+    
+    Paddle speed :
+        specify paddle speed factor (from 1 to 3)
+    
+    Auto fire period : 
+        auto fire period
+    
+    Auto fire mode : 
+        auto fire mode active or not
   
 
 # FLICKERING 
@@ -235,7 +239,7 @@ It may happens that autofire can not be stopped.  You have then to go to the set
   
 # COMPILATION
 
-  It has been developped under Linux FC9 using gcc with DINGUX SDK. 
+  It has been developped under Linux FC9 using gcc with GCW0 SDK. 
 
   All tests have been done using a Dingoo with Dingux installed
 

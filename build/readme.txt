@@ -1,78 +1,251 @@
-ProSystem for OD V1.1
---------------------------------------------------------------------------------
-This is a Atari 7800 for Open Dingux.
-To use this emulator, you must have compatibles ROMS with .A78 extension.
-Do not ask me about ROMS, I don't have them. A search with Google will certainly help 
-you.
+Welcome to RG350-2600
 
-Features :
-----------
- Most things you should expect from an emulator.
+A multi-platform Atari 2600 VCS emulator
 
-Missing :
----------
- Just tell me :).
+The Stella team :
 
-Check updates on my web site : 
-http://www.portabledev.com
+   Ludovic Jacomme alias Zx-81 (see http://zx81.zx81.free.fr)
 
---------------------------------------------------------------------------------
-List of emulated games
---------------------------------------------------------------------------------
-Lots of the atari 7800 games ;)
+    Bradford Mott       Project management and emulation core developer (original author of Stella)
 
---------------------------------------------------------------------------------
-History :
---------------------------------------------------------------------------------
-V1.1 : 17/11/2012
-  Fix bug with uppercase/lowercase names
-  Save current rom directory
-  Clean up makefile
-  Add 32bpp for gcw, 16bpp for a320 version to fit correct hardware color depth
-  Add ring buffer for sound
+    Stephen Anthony     Author of the SDL port of Stella and emulation core   
+    Joe D'Andrea        Maintainer of the Solaris build of Stella
+    Doodle              Current maintainer of the OS/2 port of Stella
+    Mark Grebe          Author/maintainer of the Mac OSX port of Stella
+    Erik "Voch" Kovach  Maintainer of the 'stella.pro' game properties file
+    Kostas Nakos        Author/maintainer of the WinCE port of Stella
+    Darrell Spice Jr.   Original author of the OS/2 port of Stella
+    Eckhard Stolberg    Emulation core development
+    Aenea               First PSP port version of Stella
+    Brian Watson        Emulation core development and debugger support
+    Alex Zaballa        Author/maintainer of the DINGUX port of Stella
+    Ludovic Jacomme     Another PSP & DINGUX port of Stella
+    Jorge Hontoria      RG350 port of DINGUX-2600
+
+    PSP2600             PSP version
+    GP2X-2600           GP2X version
+    WIZ-2600            GP2X Wiz version
+    DINGUX-2600         Dingoo/Dingux version
+    RG350-2600          RG350 version
+
+   See http://stella.sourceforge.net/ for further informations
+   
+
+# INTRODUCTION
+
+  Stella is the best emulator of Atari 2600 game console, running on many different systems, such as Linux, Solaris, Windows, MacOS/X WinCE, OS/2, DINGUX and RG350.
+
+  RG350-2600 is a port on RG350 of DINGUX-2600 port version.
+
+  This package is under GPL Copyright, read COPYING file for  more information about it.
+
+
+# INSTALLATION
+
+  Unzip the zip file, and copy the content of the directory local to your SD memory.
+
+  Put your roms files on "roms" sub-directory. 
+
+  For any comments or questions on this version, please visit 
+    http://zx81.zx81.free.fr, 
+    http://zx81.dcemu.co.uk or 
+    http://www.gp32x.com/
+
+
+# CONTROL
+
+  RG350        Atari 2600
   
-V1.0 : 01/10/2012
-  Initiale release
+    Y          R Diff A
+    X          Reset    
+    B          Fire
+    A          Select
+    Up         Up
+    Down       Down
+    Left       Left
+    Right      Right
 
---------------------------------------------------------------------------------
-How to use ProSystem :
---------------------------------------------------------------------------------
-Put PrOOSystem.SIM in your GAME directory. Put your .A78 games where you want.
-Use "Interesting game" from Dingoo menu and choose your .A78 file, the emu will launch
-with the game ;)
+    LTrigger   Toogle with L keyboard mapping
+    RTrigger   Toggle with R keyboard mapping
 
-Controls (both Player 1 and 2) :
- * Direction pad and A / B : Atari pad and button 1 / 2
- * START is the same that the PAUSE button
- * SELECT is the same that the SELECT button
- * X is the same than the RESET button
- * Y is the same than the RESET button
- * R is the same than the Left Difficulty button
- * L is the same than the Right Difficulty button
- 
-You can also click on START + SELECT to enter the menu.
+  LTrigger mapping :
 
-Also, if you have a Atari 7800 bios file, you can put it in the same directory than
-the emulator with the name "7800.rom".
+    RG350      Atari 2600
+    
+    Y          Hotkey FPS
+    X          Hotkey Load state
+    B          Hotkey Save state
+    A          Hotkey render
+    Up         Up
+    Down       Down
+    Left       Left
+    Right      Right
 
-Use START + SELECT to enter menu. 
-During menu browsing, R and L can go through pages of available games.
+  RTrigger mapping :
 
---------------------------------------------------------------------------------
-Credits
---------------------------------------------------------------------------------
-Special thanks to :
-  Greg Stanton for ProSystem source code (https://home.comcast.net/~gscottstanton/)
-   an Atari 7800 emulator.
-  zx81 (http://zx81.zx81.free.fr/serendipity_fr/) for PSP A7800 version (that helped
-   me a lot to understand ProSystem).
-  raz0red (http://www.twitchasylum.com/forum/viewtopic.php?t=519) for WII7800  (that
-  helped me a lot to fix some timing problem).
-  d_smargin for handy_a320 gui, which i used some part of code for prosystem gui.
-  qbertaddict for test and video of prosystem.
-Without the help of the infos from these people, this emulator can't be here.
---------------------------------------------------------------------------------
-Alekmaul
-alekmaul@portabledev.com
-http://www.portabledev.com
---------------------------------------------------------------------------------
+    RG350      Atari 2600 
+    
+    Y          R Diff B
+    X          Reset 
+    B          Hotkey auto-fire
+    A          Select 
+    Up         Up
+    Down       Down
+    Left       Left
+    Right      Right
+
+
+  Press Menu      to enter in emulator main menu.
+  Press Select    open/close the virtual keyboard
+
+    X          Go Up directory
+    B          Valid
+    A          Valid
+    Y          Go Back to the emulator window
+
+The On-Screen Keyboard of "Danzel" and "Jeff Chen"
+
+Use digital pad to choose one of the 9 squares, and use X, Y, A, B to choose one of the 4 letters of the highlighted square.
+
+Use LTrigger and RTrigger to see other 9 squares figures.
+
+
+# LOADING ROM FILES (.A26 or .BIN)
+
+If you want to load rom images in the virtual drive of your emulator, you have to put your rom file (with .zip, .bin or .a26 file extension) on your SD memory in the 'roms' directory. 
+
+Then, while inside Atari 2600 emulator, just press SELECT to enter in the emulator main menu, choose "Load ROM" and then using the file selector choose one game file to load in your emulator. Back to the emulator window, your game should run automatically.
+
+# COMMENTS
+
+You can write your own comments for games using the "Comment" menu.  The first line of your comments would then be displayed in the file requester menu while selecting the given file name (snapshot, disk, keyboard, settings).
+
+
+# LOADING KEY MAPPING FILES
+
+  For given games, the default keyboard mapping between RG350 Keys and Atari 2600 keys, is not suitable, and the game can't be played on RG350-2600.
+
+  To overcome the issue, you can write your own mapping file. Using notepad for example you can edit a file with the .kbd extension and put it in the kbd directory.
+
+  For the exact syntax of those mapping files, have a look on sample files already presents in the kbd directory (default.kbd etc ...).
+
+  After writting such keyboard mapping file, you can load them using the main menu inside the emulator.
+
+  If the keyboard filename is the same as the rom file (.a26) then when you load this rom file, the corresponding keyboard file is 
+  automatically loaded !
+
+  You can now use the Keyboard menu and edit, load and save your keyboard mapping files inside the emulator. The Save option save the .kbd
+  file in the kbd directory using the "Game Name" as filename. The game name is displayed on the right corner in the emulator menu.
+
+# CHEAT CODE (.CHT)
+
+  You can use cheat codes with this emulator.  You can add your own cheat codes in the cheat.txt file and then import them in the cheat menu.  
+
+  All cheat codes you have specified for a game can be save in a CHT file in 'cht' folder.  Those cheat codes would then be automatically loaded when you start the game.
+
+  The CHT file format is the following :
+  - Enable, Address, Value, Comment
+    1,36f,3,Cheat comment
+  
+    Using the Cheat menu you can search for modified bytes in RAM between current time and the last time you saved the RAM. It might be very usefull to find "poke" address by yourself, monitoring for example life numbers.
+  
+  To find a new "poke address" you can proceed as follow :
+  
+  Let's say you're playing Moon patrol and you want to find the memory address where "number lives" is stored.
+  
+    . Start a new game in Moon patrol
+    . Enter in the cheat menu. 
+    . Choose Save Ram to save initial state of the memory. 
+    . Specify the number of lives you want to find in
+        "Scan Old Value" field.
+        (for Glouton the initial lives number is 3)
+    . Go back to the game and loose a life.
+    . Enter in the cheat menu. 
+    . Specify the number of lives you want to find in
+        "Scan New Value" field.
+        (for Moon patrol the lives number is now 2)
+    . In Add Cheat you have now one matching Address
+    . Specify the Poke value you want (for example 3) 
+        and add a new cheat with this address / value.
+  
+  The cheat is now activated in the cheat list and you
+  can save it using the "Save cheat" menu.
+  
+  Let's enjoy Moon patrol with infinite life !!
+  
+# SETTINGS
+
+  You can modify several settings value in the settings menu of this emulator.
+  
+  The following parameters are available :
+
+    Sound enable : 
+        enable or disable the sound
+    
+    Speed limiter :
+        limit the speed to a given fps value
+    
+    Skip frame : 
+        to skip frame and increase emulator speed
+    
+    Display fps : 
+        display real time fps value 
+    
+    Render mode : 
+        many render modes are available with different geometry that should covered all games requirements
+    
+    Delta Y : 
+        move the center of the screen vertically
+    
+    Vsync : 
+        wait for vertical signal between each frame displayed
+    
+    Flicker mode : 
+        set flicker mode (none, simple, phosphor or average)
+        
+    Clock frequency : 
+        RG350 clock frequency, by default the value is set to 200Mhz, and should be enough for most of all games.
+
+# JOYSTICK SETTINGS
+
+  You can modify several joystick settings value in the settings menu of this emulator.  The following parameters are available :
+
+    Swap Analog/Cursor : 
+        swap key mapping between RG350 analog pad and RG350 digital pad
+    
+    Active Joystick : 
+        Joystick player, it could be 1 or 2
+    
+    Paddle enable :
+        enable or disable paddle
+    
+    Paddle speed :
+        specify paddle speed factor (from 1 to 3)
+    
+    Auto fire period : 
+        auto fire period
+    
+    Auto fire mode : 
+        auto fire mode active or not
+  
+
+# FLICKERING 
+
+  On several games such as Asteroids or Missile Command, the screen flicks, or the color are dark. You can then change the Flicker mode parameters in the Settings menu. For example, Asteroids is very nice using the "Simple" anti-flicker mode.
+
+# AUTO-FIRE
+
+It may happens that autofire can not be stopped.  You have then to go to the settings menu and set auto fire option to off ...
+  
+# COMPILATION
+
+  It has been developped under Linux FC9 using gcc with GCW0 SDK. 
+
+  All tests have been done using a Dingoo with Dingux installed
+
+  To rebuild the homebrew run the Makefile in the src archive.
+
+
+  Enjoy,
+
+            Zx
