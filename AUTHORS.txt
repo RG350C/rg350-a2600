@@ -1,0 +1,12 @@
+Stella : a multi-platform Atari 2600 VCS emulator
+
+  Bradford Mott   (original version)
+  Aenea           (first PSP port version)
+
+PSP2600     : PSP version
+GP2X-2600   : GP2X version
+WIZ-2600    : GP2X Wiz version
+Dingux-2600 : Dingoo/Dingux version
+
+  Ludovic Jacomme alias Zx-81 (see http://zx81.zx81.free.fr)
+

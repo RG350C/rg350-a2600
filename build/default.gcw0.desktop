@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Atari 2600
+Comment=Atari 2600 emulator 
+Exec=rg350-a2600.dge
+Terminal=false
+Type=Application
+MimeType=application/x-a26;
+StartupNotify=true
+Icon=icon
+Categories=emulators;
+X-OD-Manual=readme.txt
